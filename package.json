@@ -3,7 +3,7 @@
   "private": true, "license": "GPL",
 
   "scripts": {
-    "install": "bower install",
+    "install": "bower --allow-root install",
     "postinstall": "npm run-script build",
     "build": "grunt",
     "start": "grunt dev"
