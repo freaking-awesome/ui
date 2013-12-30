@@ -1,0 +1,176 @@
+.b-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100700;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-top: 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+.b-dialog--area {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.73);
+}
+.b-dialog--main {
+  position: relative;
+  margin: 0 45px;
+  box-shadow: 0 2px 4px -3px rgba(0, 0, 0, 0.9);
+}
+.b-dialog--head {
+  padding: 15px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #555;
+  background: #e2e2e2;
+}
+.b-dialog--head > i {
+  display: inline-block;
+  width: 15px;
+  margin-right: 10px;
+  text-align: center;
+}
+.b-dialog--head > span {
+  font-family: 'segoe ui semibold', 'segoe ui', arial;
+  font-weight: 600;
+}
+.b-dialog--acts {
+  float: right;
+}
+.b-dialog--acts > * {
+  margin: 0 5px 0 15px;
+}
+.b-dialog--body {
+  padding: 40px;
+  background: #f2f2f2;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+}
+.b-dialog--tabs {
+  margin: 0;
+  padding: 0 15px;
+  background: #e2e2e2;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+.b-dialog--tabs > .nav-tabs {
+  margin-bottom: -1px;
+}
+.b-dialog .b-dialog--tabs:before,
+.b-dialog .b-dialog--tabs:after {
+  content: " ";
+  display: table;
+}
+.b-dialog .b-dialog--tabs:after {
+  clear: both;
+}
+.b-dialog .b-dialog--tabs > .nav.nav-tabs,
+.b-dialog .b-dialog--tabs > .nav.nav-links {
+  max-height: 30px;
+}
+.b-dialog .b-dialog--tabs > .nav.nav-tabs > li,
+.b-dialog .b-dialog--tabs > .nav.nav-links > li {
+  margin: -1px;
+}
+.b-dialog .b-dialog--tabs > .nav.nav-tabs > li a,
+.b-dialog .b-dialog--tabs > .nav.nav-links > li a {
+  max-height: 30px;
+  margin: 0;
+  white-space: nowrap;
+}
+.b-dialog .b-dialog--tabs > .nav.nav-tabs {
+  border-bottom: 1px solid #fff;
+}
+.b-dialog .b-dialog--tabs > .nav.nav-tabs > li > a {
+  line-height: 20px;
+}
+.b-dialog .b-dialog--tabs > .nav.nav-tabs > li > a:hover {
+  background-color: rgba(242, 242, 242, 0.37);
+}
+.b-dialog .b-dialog--tabs > .nav.nav-tabs > .active > a,
+.b-dialog .b-dialog--tabs > .nav.nav-tabs > .active > a:hover {
+  background-color: #f2f2f2;
+  border-top-color: #fff;
+  border-left-color: #fff;
+}
+.b-dialog .b-dialog--tabs > .nav.nav-links {
+  border-bottom: 1px solid transparent;
+}
+.b-dialog .b-dialog--tabs > .nav.nav-links > li > a {
+  padding: 5px 10px;
+  line-height: 20px;
+  border: 1px solid transparent;
+}
+.b-dialog .b-dialog--tabs > .nav.nav-links > li > a:hover {
+  background: transparent;
+}
+.b-dialog--dialog {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 73%;
+  margin: auto;
+}
+.b-dialog--dialog--area {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.73);
+}
+.b-dialog--dialog--main {
+  position: relative;
+  background: #e2e2e2;
+  border: 1px solid transparent;
+  border-color: #fff #c2c2c2 #c2c2c2 #fff;
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.37);
+}
+.b-dialog--dialog--head {
+  padding: 5px;
+  padding-left: 10px;
+  background: transparent;
+  box-shadow: 1px 11px 0 -10px #f2f2f2;
+}
+.b-dialog--dialog--head > i {
+  margin-right: 5px;
+}
+.b-dialog--dialog--acts > * {
+  margin-left: 5px;
+}
+.b-dialog--dialog--body {
+  padding: 30px;
+  background: transparent;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+}
+.b-dialog--dialog--body form {
+  margin-top: -15px;
+}
+.animate .b-dialog.ng-enter,
+.animate .b-dialog.ng-leave {
+  transition: all .5s ease;
+  -moz-transition: all ease .5s;
+}
+.animate .b-dialog.ng-enter,
+.animate .b-dialog.ng-leave.b-dialog.ng-leave-active {
+  opacity: 0;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+}
+.animate .b-dialog.ng-leave,
+.animate .b-dialog.ng-enter.b-dialog.ng-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transition: all ease .5s;
+}

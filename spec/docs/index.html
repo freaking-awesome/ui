@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="ru" ng-app="app" ng-controller="AppCtrl"><head><meta charset="utf-8"><title ng-bind="app.title">Awesome UI...</title><link rel="stylesheet" href="../../css/awesome.css"><link rel="stylesheet" href="../../css/awesome-navs.css"><link rel="stylesheet" href="../../css/awesome-form.css"><link rel="stylesheet" href="../../css/awesome-tabs.css"><link rel="stylesheet" href="../../css/awesome-dialogs.css"><link rel="stylesheet" href="../../css/awesome-controls-select.css"><script src="../../js/libs/angular/angular.min.js"></script><script src="../../js/libs/angular/angular-animate.min.js"></script><script src="../../js/libs/angular/angular-resource.min.js"></script><script src="../../js/libs/angular/angular-route.min.js"></script><script src="../../js/awesome.js"></script><script src="../../js/awesome-select.js"></script><script type="text/javascript">
+(function() {
+  var app;
+
+  app = angular.module('app', ['awesome']);
+
+  app.constant('version', '0.2');
+
+  app.constant('debug', console);
+
+  app.controller('AppHeadCtrl', function($rootScope, $scope) {});
+
+}).call(this);
+</script><script type="text/javascript">
+(function() {
+  var app;
+
+  app = angular.module('app');
+
+  app.config(function($routeProvider, AppServiceProvider) {
+    $routeProvider.when('/guide', AppServiceProvider.Route.factory('guide', 'view', {
+      controller: 'GuideRouteCtrl',
+      templateUrl: '/partials/Guide/'
+    }));
+    $routeProvider.when('/design', AppServiceProvider.Route.factory('guide-design', 'view', {
+      controller: 'GuideDesignRouteCtrl',
+      templateUrl: '/partials/Guide/Design/'
+    }));
+    $routeProvider.when('/design/controls/Dialog', AppServiceProvider.Route.factory('guide-design-controls-dialog', 'view', {
+      templateUrl: '/partials/Guide/Design/controls/Dialog/'
+    }));
+    $routeProvider.when('/design/controls/Dialog/:exampleId/:tab?/:mode?', AppServiceProvider.Route.factory('guide-design-controls-dialog-example', 'dialog', {
+      templateUrl: '/partials/Guide/Design/controls/Dialog/Example/'
+    }));
+    $routeProvider.when('/design/controls/Select', AppServiceProvider.Route.factory('guide-design-controls-select', 'view', {
+      templateUrl: '/partials/Guide/Design/controls/Select/'
+    }));
+    return $routeProvider.when('/reference', AppServiceProvider.Route.factory('reference', 'view', {
+      controller: 'ReferenceRouteCtrl',
+      templateUrl: '/partials/Reference/'
+    }));
+  });
+
+  app.controller('GuideRouteCtrl', function($rootScope, $scope) {
+    return console.log('guide route');
+  });
+
+  app.controller('GuideDesignRouteCtrl', function($rootScope, $scope) {
+    return console.log('guide design route');
+  });
+
+  app.controller('ReferenceRouteCtrl', function($rootScope, $scope) {
+    return console.log('reference route');
+  });
+
+}).call(this);
+</script><script id="/partials/Guide/" type="text/ng-template"><div class="b-page layout-landing"><section><hgroup><h1><a href>Awesome</a></h1><h2><p>frontend framework</p><p>for advanced <a href><u>AngularJS</u></a></p><p>applications</p></h2></hgroup></section></div></script><script id="/partials/Guide/Design/" type="text/ng-template"><div class="b-page layout-landing"><section><hgroup><h1>design with <a href><u>Awesome</u></a></h1></hgroup></section><section><h2>components</h2><h1><a href="#/design/controls/Dialog/example">Dialog</a></h1><h1><a ng-click="notify('error', 'ошибка')">Notify</a></h1></section><section><h2>controls</h2><hr><article><h1><a href="#/design/controls/Button">Button</a></h1><p>Use any of the available button classes to quickly create a styled button. Add .btn-lg or .btn-sm for additional sizes.</p><figure><button class="b-btn b-btn-lg">Button</button> <button class="b-btn">Button</button> <button class="b-btn b-btn-sm">Button</button></figure><figure><button class="b-btn b-btn-lg b-btn-default">Button</button> <button class="b-btn b-btn-default">Button</button> <button class="b-btn b-btn-sm b-btn-default">Button</button></figure><figure><button class="b-btn b-btn-lg b-btn-primary">Button</button> <button class="b-btn b-btn-primary">Button</button> <button class="b-btn b-btn-sm b-btn-primary">Button</button></figure><figure><button class="b-btn b-btn-lg b-btn-success">Button</button> <button class="b-btn b-btn-success">Button</button> <button class="b-btn b-btn-sm b-btn-success">Button</button></figure><figure><button class="b-btn b-btn-lg b-btn-warning">Button</button> <button class="b-btn b-btn-warning">Button</button> <button class="b-btn b-btn-sm b-btn-warning">Button</button></figure><figure><button class="b-btn b-btn-lg b-btn-failure">Button</button> <button class="b-btn b-btn-failure">Button</button> <button class="b-btn b-btn-sm b-btn-failure">Button</button></figure></article><hr><article><h1><a href="#/design/controls/Blockquote">Blockquote</a></h1><blockquote><h3>Customize the collapsing point</h3><p>Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.</p></blockquote><blockquote class="default"><h3>Customize the collapsing point</h3><p>Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.</p></blockquote><blockquote class="primary"><h3>Customize the collapsing point</h3><p>Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.</p></blockquote><blockquote class="success"><h3>Customize the collapsing point</h3><p>Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.</p></blockquote><blockquote class="warning"><h3>Customize the collapsing point</h3><p>Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.</p></blockquote><blockquote class="failure"><h3>Customize the collapsing point</h3><p>Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.</p></blockquote></article><hr><article><h1><a href="#/design/controls/Select">Select</a></h1></article></section></div></script><script type="text/javascript">
+(function() {
+
+
+}).call(this);
+</script><script id="/partials/Guide/Design/controls/Dialog/" type="text/ng-template"></script><script id="/partials/Guide/Design/controls/Dialog/Example/" type="text/ng-template"><div class="b-users-user-dialog"><div class="b-dialog--head"><i class="icon-file"></i><span>Пример диалогового окна</span><div class="b-dialog--acts"><a ng-click="showHelp()"><u>справка</u></a><a ng-click="hideViewDialog()"><i class="icon-remove"></i></a></div></div><!--+bDialogTabs()<ul class="nav nav-tabs"><li ng-class="{active:!dialog.tab, disable:dialog.tabs.disabled.foo}"><a ng-href="#/design/controls/Dialog/example">Пример</a></li><li ng-class="{active:'bar'==dialog.tab, disable:dialog.tabs.disabled.bar}"><a ng-href="#/design/controls/Dialog/example/bar">Вкладка</a></li><li ng-class="{active:'baz'==dialog.tab, disable:dialog.tabs.disabled.baz}"><a ng-href="#/design/controls/Dialog/example/baz">Вкладка</a></li></ul>--><div class="b-dialog--body"><h1>dialog</h1></div></div></script><script type="text/javascript">
+(function() {
+  var app;
+
+  app = angular.module('app');
+
+  app.controller('ControlsSelectExampleCtrl', function($rootScope, $scope) {
+    return $scope.data = [
+      {
+        label: 'Первый пункт выпадайки очень длинный'
+      }, {
+        label: 'Второй пункт'
+      }, {
+        label: 'Третий пункт'
+      }, {
+        label: 'Четвертый'
+      }, {
+        label: 'Патый'
+      }, {
+        label: 'Шатый'
+      }, {
+        label: 'Седьмой'
+      }
+    ];
+  });
+
+  app.controller('ControlsSelectExample1Ctrl', function($scope) {
+    $scope.selection = $scope.data[3];
+    return $scope.changeModel = function() {
+      return $scope.selection = $scope.data[0];
+    };
+  });
+
+  app.controller('ControlsSelectExample2Ctrl', function($scope) {
+    $scope.selection = [$scope.data[1], $scope.data[2]];
+    return $scope.changeModel = function() {
+      return $scope.selection = [$scope.data[0], $scope.data[2], $scope.data[3]];
+    };
+  });
+
+}).call(this);
+</script><script id="/partials/Guide/Design/controls/Select/" type="text/ng-template"><div class="b-page layout-landing"><section><article ng-controller="ControlsSelectExampleCtrl"><h2>Для коротких списков</h2><figure ng-controller="ControlsSelectExample1Ctrl"><div class="ctrl"><span>Выберите одно значение...</span><ae-select ae-select-data="data" ng-model="selection"></ae-select></div><small><b>{{selection}}</b><a ng-click="changeModel()">— <u>изменить модель</u></a></small></figure><figure ng-controller="ControlsSelectExample2Ctrl"><div class="ctrl"><span>Выберите несколько значений...</span><ae-select ae-select-data="data" ng-model="selection" multiple></ae-select></div><small><b>{{selection}}</b><a ng-click="changeModel()">— <u>изменить модель</u></a></small><hr><div class="ctrl"><span>Выберите из выбранного...</span><ae-select ae-select-data="selection" ng-model="selection1"></ae-select></div><small><b>{{selection1}}</b></small></figure></article></section></div></script><script id="/partials/Reference/" type="text/ng-template"><section>reference</section></script></head><body ng-controller="ViewCtrl"><div class="b-app"><header ng-controller="AppHeadCtrl" class="b-app--head"><div class="navbar navbar-static-top"><a ng-class="{active:'index'==app.route.name}" ng-href="{{app.prefix}}/" class="navbar-brand"><span>Awesome UI</span><sup> {{app.version}}</sup></a><div class="nav-collapse"><ul class="nav navbar-nav pull-left"><li><a ng-href="#/design"><u>Design</u></a></li><li><a ng-href="#/develop"><u>Develop</u></a></li></ul><ul class="nav navbar-nav pull-right"><li><a ng-href="#/guide"><u>Docs</u></a></li></ul></div></div></header><main class="b-app--body"><div ng-view class="b-app--view"></div><div ng-if="app.dialog.overlay" ng-init="dialog=app.dialog" class="b-dialog"><div ng-click="hideViewDialog()" class="b-dialog--area"></div><div class="b-dialog--main"><div ng-if="dialog.overlay &amp;&amp; dialog.templateUrl" class="b-include-dialog"><div ng-include="dialog.templateUrl" class="b-include"></div></div></div></div></main><div ng-if="app.notify.notifications.length" class="b-app--notifications"><div ng-repeat="notification in app.notify.notifications" class="b-app--notification"><p ng-if="'error'==notification.type" class="note">{{notification}}</p></div></div></div></body></html>

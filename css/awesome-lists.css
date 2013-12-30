@@ -1,0 +1,57 @@
+.list--item {
+  display: inline-block;
+}
+.list--item:not(:last-child):after {
+  content: ', ';
+  display: inline-block;
+}
+.b-feature--group {
+  padding-bottom: 7%;
+  border-bottom: 1px solid #e2e2e2;
+}
+.b-feature-group--sep-top,
+.b-feature-group--sep-bottom {
+  float: none;
+  clear: both;
+  border-color: transparent;
+  border-top: 1px solid #e2e2e2;
+}
+.b-feature-group--sep-bottom {
+  border-color: transparent;
+}
+.b-feature {
+  margin: 0 1em 3em;
+  float: left;
+}
+.b-feature--title {
+  margin: 0 0 0 -1em;
+  padding-left: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font: 17px/20px 'Segoe UI Semibold', 'ubuntu', arial, sans-serif;
+  font-weight: 400;
+}
+.b-feature--title > span {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: -1px;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.b-feature > p {
+  padding-left: 1px;
+}
+.b-feature--list {
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+}
+.b-feature--list > li {
+  margin: 3px 0;
+  padding-left: 1em;
+}
+.b-feature--list > li:before {
+  content: '▪';
+  position: absolute;
+  margin-left: -1em;
+  color: rgba(0, 0, 0, 0.7);
+}

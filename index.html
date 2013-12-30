@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="ru" ng-app="app" ng-controller="AppCtrl"><head><meta charset="utf-8"><title ng-bind="app.title">Awesome UI...</title><link rel="stylesheet" href="./css/awesome.css"><link rel="stylesheet" href="./css/awesome-navs.css"><script src="./js/libs/angular/angular.min.js"></script><script src="./js/libs/angular/angular-animate.min.js"></script><script src="./js/libs/angular/angular-resource.min.js"></script><script src="./js/libs/angular/angular-route.min.js"></script><script src="./js/awesome.js"></script><script type="text/javascript">
+(function() {
+  var app;
+
+  app = angular.module('app', ['awesome']);
+
+  app.constant('version', '0.2');
+
+  app.constant('debug', console);
+
+  app.controller('AppHeadCtrl', function($rootScope, $scope) {});
+
+}).call(this);
+</script></head><body ng-controller="ViewCtrl"><div class="b-app"><header ng-controller="AppHeadCtrl" class="b-app--head"><div class="navbar navbar-static-top"><a ng-class="{active:'index'==app.route.name}" ng-href="{{app.prefix}}/" class="navbar-brand"><span>Awesome UI</span><sup> {{app.version}}</sup></a><div class="nav-collapse"><ul class="nav navbar-nav pull-left"><li><a ng-href="spec/docs/index.html#/design"><u>Design</u></a></li><li><a ng-href="spec/docs/index.html#/develop"><u>Develop</u></a></li></ul><ul class="nav navbar-nav pull-right"><li><a ng-href="spec/docs/index.html"><u>Documentation</u></a></li></ul></div></div></header></div></body></html>

@@ -1,0 +1,110 @@
+.b-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.b-table > thead > tr > th,
+.b-table > tbody > tr > th,
+.b-table > thead > tr > td,
+.b-table > tbody > tr > td {
+  padding: 7px 15px 8px;
+  line-height: 20px;
+  font: inherit;
+  font-weight: normal;
+  color: #777;
+  border: 1px solid #fff;
+  border-width: 1px 0;
+  vertical-align: top;
+  text-align: left;
+}
+.b-table > thead > tr > th:not(:last-child),
+.b-table > tbody > tr > th:not(:last-child),
+.b-table > thead > tr > td:not(:last-child),
+.b-table > tbody > tr > td:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+.b-table > thead > tr > th.f,
+.b-table > tbody > tr > th.f,
+.b-table > thead > tr > td.f,
+.b-table > tbody > tr > td.f,
+.b-table > thead > tr > th.flex,
+.b-table > tbody > tr > th.flex,
+.b-table > thead > tr > td.flex,
+.b-table > tbody > tr > td.flex {
+  width: 100%;
+}
+.b-table > thead > tr > th.l,
+.b-table > tbody > tr > th.l,
+.b-table > thead > tr > td.l,
+.b-table > tbody > tr > td.l,
+.b-table > thead > tr > th.left,
+.b-table > tbody > tr > th.left,
+.b-table > thead > tr > td.left,
+.b-table > tbody > tr > td.left,
+.b-table > thead > tr > th.text-left,
+.b-table > tbody > tr > th.text-left,
+.b-table > thead > tr > td.text-left,
+.b-table > tbody > tr > td.text-left {
+  text-align: left;
+}
+.b-table > thead > tr > th.c,
+.b-table > tbody > tr > th.c,
+.b-table > thead > tr > td.c,
+.b-table > tbody > tr > td.c,
+.b-table > thead > tr > th.center,
+.b-table > tbody > tr > th.center,
+.b-table > thead > tr > td.center,
+.b-table > tbody > tr > td.center,
+.b-table > thead > tr > th.text-center,
+.b-table > tbody > tr > th.text-center,
+.b-table > thead > tr > td.text-center,
+.b-table > tbody > tr > td.text-center {
+  text-align: center;
+}
+.b-table > thead > tr > th.r,
+.b-table > tbody > tr > th.r,
+.b-table > thead > tr > td.r,
+.b-table > tbody > tr > td.r,
+.b-table > thead > tr > th.right,
+.b-table > tbody > tr > th.right,
+.b-table > thead > tr > td.right,
+.b-table > tbody > tr > td.right,
+.b-table > thead > tr > th.text-right,
+.b-table > tbody > tr > th.text-right,
+.b-table > thead > tr > td.text-right,
+.b-table > tbody > tr > td.text-right {
+  text-align: right;
+}
+.b-table > thead > tr > th,
+.b-table > tbody > tr > th {
+  background: #e2e2e2;
+}
+.b-table > thead > tr > td,
+.b-table > tbody > tr > td {
+  background: #f2f2f2;
+}
+.b-table .col {
+  position: relative;
+}
+.b-table .col-sortable {
+  padding-right: 30px;
+  cursor: pointer;
+}
+.b-table .col-sortable:before,
+.b-table .col-sortable:after {
+  content: "\f0dc";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: FontAwesome;
+  font-weight: inherit;
+  color: #f9f9f9;
+}
+.b-table .col-sortable:hover {
+  color: #333;
+}
+.b-table .col-sortable:hover:before,
+.b-table .col-sortable:hover:after {
+  color: rgba(0, 0, 0, 0.3);
+}

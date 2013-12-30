@@ -1,0 +1,455 @@
+.b-btn,
+input,
+textarea,
+label,
+button {
+  display: inline-block;
+  margin: 0;
+  padding: 5px 10px;
+  border: 0;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+.b-btn,
+button {
+  padding: 0.5em 1em;
+  background-color: ThreeDFace;
+  box-shadow: 0 0 0 0.1em ThreeDLightShadow;
+}
+.b-btn + button,
+button + button {
+  margin-left: 0.5em;
+}
+.b-btn:hover,
+button:hover {
+  background-color: ThreeDShadow;
+  color: ButtonHighlight;
+}
+.b-btn:active,
+button:active {
+  background-color: ThreeDDarkShadow;
+  color: ButtonHighlight;
+}
+.b-btn-block,
+button-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.caret {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0;
+  margin-top: -0.15em;
+  margin-left: -0.3em;
+  content: '';
+  border-top: 0.3em solid #777;
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+}
+.b-btn-primary,
+button[type=submit] {
+  background-color: Highlight;
+  color: HighlightText;
+}
+.b-btn-primary .caret,
+button[type=submit] .caret {
+  border-top: 0.3em solid HighlightText;
+}
+.b-btn-primary:hover,
+button[type=submit]:hover {
+  background-color: ThreeDShadow;
+}
+.b-btn-primary:active,
+button[type=submit]:active {
+  background-color: ThreeDDarkShadow;
+  color: ButtonHighlight;
+}
+.b-btn-text,
+button[type=clear],
+button[rel=menu],
+.b-btn-text:hover,
+button[type=clear]:hover,
+button[rel=menu]:hover,
+.b-btn-text:active,
+button[type=clear]:active,
+button[rel=menu]:active {
+  background: transparent;
+}
+.b-btn-caret {
+  position: relative;
+}
+input,
+select,
+textarea {
+  padding: 10px 15px;
+  background: #f2f2f2;
+  border: 0;
+  outline: none;
+  color: inherit;
+  cursor: default;
+}
+input:hover,
+select:hover,
+textarea:hover {
+  background-color: ThreeDHighlight;
+  color: inherit;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  background-color: #ffffff;
+  color: inherit;
+  cursor: initial;
+}
+input + input,
+select + input,
+textarea + input {
+  margin-left: 0.5em;
+}
+textarea {
+  line-height: 150%;
+  padding: 0.75em 1em;
+}
+label {
+  display: block;
+  width: auto;
+  height: auto;
+}
+label > span {
+  padding: 0 1em;
+}
+label input,
+label textarea {
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+  margin: 0;
+}
+form {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+form select,
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+form label input,
+form label textarea {
+  margin: 0;
+  margin-top: 0.5em;
+}
+form legend {
+  margin: 0.8em 0;
+  display: block;
+  font-size: 2em;
+  margin: 0.5em 0.45em 1em;
+  padding: 0;
+}
+form fieldset {
+  display: block;
+  margin: 2em 0;
+  padding: 0;
+  border: 0;
+}
+form fieldset legend {
+  font-size: 1.4em;
+  margin: 1.4em 0.7em;
+}
+form button {
+  margin: 0;
+  padding: 10px 15px;
+  text-align: center;
+}
+form button + button {
+  margin-left: 0.8em;
+}
+label.b-label {
+  margin: 15px 0 0;
+  padding: 0;
+}
+.b-input {
+  border: 1px solid #fff;
+  box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.37);
+}
+.b-well {
+  padding: 1em;
+  background: #f2f2f2;
+  box-shadow: inset 0 0 0 0.1em #b3b3b3, inset 0 0 0 0.35em #fcfcfc, 0 0 0.5em -0.2em;
+}
+.b-well > form {
+  margin: 1em 0;
+}
+.b-well > form input,
+.b-well > form textarea,
+.b-well > form label {
+  margin: 0.8em 0;
+}
+.b-well > form input,
+.b-well > form textarea {
+  border-radius: 0;
+  box-shadow: inset 0 0 0 0.1em #d9d9d9, 0 0 0 0.3em #fcfcfc;
+}
+/*/
+ * Ф О Р М А
+ */
+.b-form--actions {
+  padding: 0.8em;
+  background: #e6e6e6;
+  border-top: 0.1em solid #d9d9d9;
+}
+.b-form--actions button {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.b-form--actions button[type=submit] {
+  padding: 0.8em 3em;
+}
+.b-form--actions button[type=clear] {
+  float: right;
+}
+.b-control {
+  margin: 0.5em;
+  white-space: nowrap;
+}
+.b-control form {
+  margin: 0;
+}
+.b-control:hover {
+  background-color: ThreeDFace;
+}
+.b-control--label,
+.b-control--input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em 0.8em;
+  font: inherit;
+  line-height: 1.5em;
+}
+.b-control--label {
+  padding-left: 1.5em;
+}
+.b-control--input {
+  margin: 0;
+}
+.b-control--inputs {
+  position: relative;
+  margin: 0.5em;
+  box-shadow: 0 0 0 0.1em ThreeDLightShadow, 0 0 0 0.5em ThreeDFace;
+}
+.b-control--input-append {
+  position: absolute;
+  top: -0.5em;
+  left: auto;
+  right: 0;
+}
+.b-control--input-append .b-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.5em 0;
+}
+.b-control--input-append .b-btn-caret {
+  background: transparent;
+  box-shadow: none;
+}
+.b-control--input-append .b-btn-caret:hover {
+  background-color: ThreeDHighlight;
+}
+.b-control--input-append .b-btn-caret:active {
+  background-color: ThreeDDarkShadow;
+  color: ButtonHighlight;
+}
+/*/
+ * Б О Г А Т Ы Е  К О Н Т Р О Л Ы
+ */
+.b-rich {
+  /*/
+     * Ф О Р М А
+     */
+  /*/
+     * К О Н Т Р О Л
+     */
+}
+.b-rich--form {
+  /*/
+         * стиль формы
+         */
+}
+.b-rich--control {
+  /*/
+         * стиль контролов
+         */
+  /*/
+         * стиль кнопок
+         */
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.b-calendar > table {
+  border-collapse: separate;
+  border-spacing: 0.3em;
+  font-size: 80%;
+  text-align: center;
+}
+.b-calendar > table > thead > tr > td {
+  color: #d9d9d9;
+}
+.b-calendar > table > tbody > tr > td {
+  min-width: 3em;
+  padding: 1em 0;
+  background: #e6e6e6;
+  box-shadow: inset 0 0 0 0.1em #d9d9d9;
+  line-height: 1em;
+  color: white;
+  cursor: default;
+}
+.b-calendar > table > tbody > tr > td:hover {
+  color: #616161;
+  background: #f2f2f2;
+}
+.b-calendar > table > tbody > tr > th {
+  padding-left: 0.8em;
+  color: #d9d9d9;
+}
+.b-calendar.b-well > table {
+  margin-top: -1em;
+}
+.btn-link {
+  color: #4082C4;
+  cursor: pointer;
+}
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active,
+.btn-link u {
+  text-decoration: none;
+}
+.btn-link u {
+  border-bottom: 1px dashed rgba(64, 130, 196, 0.37);
+}
+.btn-link:hover {
+  color: #3169A0;
+}
+.btn-link:hover u {
+  border-bottom-color: rgba(49, 105, 160, 0.73);
+}
+/* Формы */
+.input {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  margin: -1px;
+  line-height: 20px;
+  font: inherit;
+  color: #555;
+  background: #fff;
+  border: 1px solid;
+  border-color: #fff #fff #fff #fff;
+  outline: none;
+  position: relative;
+}
+.input,
+.input:focus {
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.21);
+}
+.input-width-full {
+  width: 100%;
+}
+.input-width-auto {
+  width: auto;
+}
+.input-lg {
+  padding: 11px 15px 9px;
+  font-size: 16px;
+}
+.input-sm {
+  padding: 3px;
+  line-height: 12px;
+  font-size: 11px;
+}
+.input:focus {
+  color: #333;
+}
+.input.ng-valid,
+.input.ng-invalid:not(.ng-invalid-required) {
+  z-index: 1;
+}
+.input.ng-valid {
+  color: #357ebd;
+  border-color: rgba(82, 168, 236, 0.8);
+}
+.input.ng-invalid:not(.ng-invalid-required) {
+  color: #b94a48;
+  border-color: rgba(185, 74, 72, 0.7);
+}
+.input.dropdown > .dropdown-menu {
+  position: absolute;
+}
+.form {
+  margin: -15px;
+  padding: 15px;
+  background: #f2f2f2;
+}
+.form .input {
+  margin-bottom: 10px;
+}
+.form .legend,
+.form legend {
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  font-size: 17px;
+  line-height: 20px;
+  color: #b2b2b2;
+  border: 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+.form-lg .input {
+  padding: 11px 15px 9px;
+  font-size: 16px;
+}
+.form-lg .legend,
+.form-lg legend {
+  font-size: 21px;
+}
+.form-acts {
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #e2e2e2;
+}
+.form.ng-valid .legend,
+.form.ng-valid legend {
+  color: #357EBD;
+  border-bottom-color: rgba(82, 168, 236, 0.37);
+}
+.form.ng-valid .form-acts {
+  color: #357EBD;
+  border-top-color: rgba(82, 168, 236, 0.37);
+}
+.form .btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 1px;
+}
+.form .btn-primary {
+  opacity: 1;
+}
+.form .btn-primary[disabled] {
+  color: #b2b2b2;
+  background-color: rgba(186, 186, 186, 0) !important;
+  border-color: rgba(186, 186, 186, 0.37) !important;
+}
