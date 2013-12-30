@@ -1,0 +1,64 @@
+include mixins
+
+!!! html
+html(lang='ru', ng-app='app', ng-controller='AppCtrl')
+
+
+    head
+        block head
+            meta(charset='utf-8')
+            title(ng-bind="app.title") Awesome UI...
+
+            block head-links
+                link(rel='stylesheet', href='css/awesome.css')
+                link(rel='stylesheet', href='css/awesome-navs.css')
+
+            block head-scripts
+                script(src='js/libs/angular/angular.min.js')
+                script(src='js/libs/angular/angular-animate.min.js')
+                script(src='js/libs/angular/angular-resource.min.js')
+                script(src='js/libs/angular/angular-route.min.js')
+                script(src='js/awesome.js')
+
+            block head-scripts-app
+                :coffeescript
+
+
+
+                    app= angular.module 'app', ['awesome']
+
+                    app.constant 'version', '0.2'
+                    app.constant 'debug', console
+
+
+
+                    app.controller 'AppHeadCtrl', ($rootScope, $scope) ->
+
+
+
+    body(ng-controller='ViewCtrl'): block body
+        .b-app
+
+            header.b-app--head(ng-controller="AppHeadCtrl"): block app-head
+
+                .navbar.navbar-static-top
+
+                    a.navbar-brand(ng-class="{active:'index'==app.route.name}", ng-href="{{app.prefix}}/")
+                        span Awesome UI
+                        sup {{app.version}}
+
+                    .nav-collapse: block app-head-nav
+
+
+            main.b-app--body: block app-body
+                .b-app--view(ng-view)
+
+                +bDialog('app')
+                    +bDialogArea()
+                    +bDialogMain()
+
+                        .b-include-dialog(ng-if="dialog.overlay && dialog.templateUrl"): .b-include(ng-include="dialog.templateUrl")
+
+            .b-app--notifications(ng-if="app.notify.notifications.length")
+                .b-app--notification(ng-repeat="notification in app.notify.notifications")
+                    p.note(ng-if="'error'==notification.type") {{notification}}

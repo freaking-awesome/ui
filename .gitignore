@@ -4,5 +4,6 @@
 /i
 /js
 /templates
+*.html
 /node_modules
 ~*

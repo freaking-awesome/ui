@@ -1,0 +1,27 @@
+extends ../../../../layout
+
+
+
+block view
+    .b-users-user-dialog()
+        +bDialogHead()
+
+            i.icon-file
+            span Пример диалогового окна
+            +bDialogActs()
+                a(ng-click="showHelp()"): u справка
+                +bDialogActClose()
+
+        //+bDialogTabs()
+
+            ul.nav.nav-tabs
+                li(ng-class="{active:!dialog.tab, disable:dialog.tabs.disabled.foo}")
+                    a(ng-href="#/design/controls/Dialog/example") Пример
+                li(ng-class="{active:'bar'==dialog.tab, disable:dialog.tabs.disabled.bar}")
+                    a(ng-href="#/design/controls/Dialog/example/bar") Вкладка
+                li(ng-class="{active:'baz'==dialog.tab, disable:dialog.tabs.disabled.baz}")
+                    a(ng-href="#/design/controls/Dialog/example/baz") Вкладка
+
+        +bDialogBody()
+
+            h1 dialog

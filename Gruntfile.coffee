@@ -69,6 +69,12 @@ module.exports= (grunt) ->
                         debug: false
                 files: [{
                     expand: true
+                    cwd: '<%= pkg.build.awesome.docs.source %>'
+                    src: ['**/*.jade', '!**/layout.jade', '!**/mixin.jade']
+                    dest: '<%= pkg.build.awesome.docs.target %>'
+                    ext: '.html'
+                },{
+                    expand: true
                     cwd: '<%= pkg.build.awesome.templates.source %>'
                     src: ['**/*.jade', '!**/layout.jade', '!**/mixin.jade']
                     dest: '<%= pkg.build.awesome.templates.target %>'
@@ -88,7 +94,7 @@ module.exports= (grunt) ->
         watch:
             coffee:
                 files: ['**/*.coffee']
-                tasks: ['coffee']
+                tasks: ['coffee', 'jade']
             jade:
                 files: ['**/*.jade']
                 tasks: ['jade']

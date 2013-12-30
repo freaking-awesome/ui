@@ -1,6 +1,7 @@
 {
-  "name": "awesome-ui", "version": "0.1.1",
-  "private": true, "license": "GPL",
+  "name": "awesome-ui", "version": "0.2.3",
+
+  "license": "GPL",
 
   "scripts": {
     "install": "bower install",
@@ -43,6 +44,10 @@
       "js": {
         "source"    : "components/awesome/js",
         "target"    : "js"
+      },
+      "docs": {
+        "source"    : "components/awesome/spec/docs",
+        "target"    : "spec/docs"
       },
       "templates": {
         "source"    : "components/awesome",

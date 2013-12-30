@@ -1,0 +1,37 @@
+extends spec/docs/layout
+
+block head-links
+    link(rel='stylesheet', href='./css/awesome.css')
+    link(rel='stylesheet', href='./css/awesome-navs.css')
+
+block head-scripts
+    script(src='./js/libs/angular/angular.min.js')
+    script(src='./js/libs/angular/angular-animate.min.js')
+    script(src='./js/libs/angular/angular-resource.min.js')
+    script(src='./js/libs/angular/angular-route.min.js')
+    script(src='./js/awesome.js')
+
+block body
+    .b-app
+        header.b-app--head(ng-controller="AppHeadCtrl"): block app-head
+
+            .navbar.navbar-static-top
+
+                a.navbar-brand(ng-class="{active:'index'==app.route.name}", ng-href="{{app.prefix}}/")
+                    span Awesome UI
+                    sup {{app.version}}
+
+                .nav-collapse
+
+                    ul.nav.navbar-nav.pull-left
+
+                        li: a(ng-href="spec/docs/index.html#/design")
+                            u Design
+
+                        li: a(ng-href="spec/docs/index.html#/develop")
+                            u Develop
+
+                    ul.nav.navbar-nav.pull-right
+
+                        li: a(ng-href="spec/docs/index.html")
+                            u Documentation

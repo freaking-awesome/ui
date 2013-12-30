@@ -135,7 +135,7 @@ app.factory 'AppNotify', (AppService) -> class AppNotify extends AppService.AppN
         if debug then debug.groupEnd()
 
     notify: (type, data) ->
-        @notifications.push
+        @notifications.unshift
             type: type
             data: data
 

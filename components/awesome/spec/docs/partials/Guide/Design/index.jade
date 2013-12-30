@@ -1,0 +1,101 @@
+extends ../layout
+
+
+
+block b-page
+    section
+
+        hgroup
+            h1 design with 
+                a(href): u Awesome
+
+    section
+
+        h2 components
+
+        h1: a(href='#/design/controls/Dialog/example') Dialog
+        h1: a(ng-click="notify('error', 'ошибка')") Notify
+
+    section
+
+        h2 controls
+
+        hr
+        article
+            h1: a(href='#/design/controls/Button') Button
+
+            p Use any of the available button classes to quickly create a styled button. Add .btn-lg or .btn-sm for additional sizes.
+
+            figure
+                button.b-btn.b-btn-lg Button
+                | 
+                button.b-btn Button
+                | 
+                button.b-btn.b-btn-sm Button
+
+            figure
+                button.b-btn.b-btn-lg.b-btn-default Button
+                | 
+                button.b-btn.b-btn-default Button
+                | 
+                button.b-btn.b-btn-sm.b-btn-default Button
+
+            figure
+                button.b-btn.b-btn-lg.b-btn-primary Button
+                | 
+                button.b-btn.b-btn-primary Button
+                | 
+                button.b-btn.b-btn-sm.b-btn-primary Button
+
+            figure
+                button.b-btn.b-btn-lg.b-btn-success Button
+                | 
+                button.b-btn.b-btn-success Button
+                | 
+                button.b-btn.b-btn-sm.b-btn-success Button
+
+            figure
+                button.b-btn.b-btn-lg.b-btn-warning Button
+                | 
+                button.b-btn.b-btn-warning Button
+                | 
+                button.b-btn.b-btn-sm.b-btn-warning Button
+
+            figure
+                button.b-btn.b-btn-lg.b-btn-failure Button
+                | 
+                button.b-btn.b-btn-failure Button
+                | 
+                button.b-btn.b-btn-sm.b-btn-failure Button
+
+        hr
+        article
+            h1: a(href='#/design/controls/Blockquote') Blockquote
+
+            blockquote
+                h3 Customize the collapsing point
+                p Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.
+
+            blockquote.default
+                h3 Customize the collapsing point
+                p Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.
+
+            blockquote.primary
+                h3 Customize the collapsing point
+                p Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.
+
+            blockquote.success
+                h3 Customize the collapsing point
+                p Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.
+
+            blockquote.warning
+                h3 Customize the collapsing point
+                p Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.
+
+            blockquote.failure
+                h3 Customize the collapsing point
+                p Depending on the content in your navbar, you might need to change the point at which your navbar switches between collapsed and horizontal mode. Customize the @grid-float-breakpoint variable or add your own media query.
+
+        hr
+        article
+            h1: a(href='#/design/controls/Select') Select

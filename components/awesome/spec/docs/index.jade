@@ -1,0 +1,99 @@
+extends layout
+
+
+
+append head-scripts-app
+    :coffeescript
+
+
+
+        app= angular.module 'app'
+
+
+
+        app.config ($routeProvider, AppServiceProvider) ->
+
+
+
+            $routeProvider.when '/guide', AppServiceProvider.Route.factory 'guide', 'view',
+                controller: 'GuideRouteCtrl', templateUrl: '/partials/Guide/'
+
+
+            $routeProvider.when '/design', AppServiceProvider.Route.factory 'guide-design', 'view',
+                controller: 'GuideDesignRouteCtrl', templateUrl: '/partials/Guide/Design/'
+
+
+            $routeProvider.when '/design/controls/Dialog', AppServiceProvider.Route.factory 'guide-design-controls-dialog', 'view',
+                templateUrl: '/partials/Guide/Design/controls/Dialog/'
+
+            $routeProvider.when '/design/controls/Dialog/:exampleId/:tab?/:mode?', AppServiceProvider.Route.factory 'guide-design-controls-dialog-example', 'dialog',
+                templateUrl: '/partials/Guide/Design/controls/Dialog/Example/'
+
+
+            $routeProvider.when '/design/controls/Select', AppServiceProvider.Route.factory 'guide-design-controls-select', 'view',
+                templateUrl: '/partials/Guide/Design/controls/Select/'
+
+
+            $routeProvider.when '/reference', AppServiceProvider.Route.factory 'reference', 'view',
+                controller: 'ReferenceRouteCtrl', templateUrl: '/partials/Reference/'
+
+
+
+        app.controller 'GuideRouteCtrl', ($rootScope, $scope) ->
+            console.log 'guide route'
+
+        app.controller 'GuideDesignRouteCtrl', ($rootScope, $scope) ->
+            console.log 'guide design route'
+
+
+
+        app.controller 'ReferenceRouteCtrl', ($rootScope, $scope) ->
+            console.log 'reference route'
+
+
+
+append head-scripts-app
+
+
+    script(id='/partials/Guide/', type='text/ng-template')
+        include partials/Guide/index
+
+
+    script(id='/partials/Guide/Design/', type='text/ng-template')
+        include partials/Guide/Design/index
+
+
+    include partials/Guide/Design/controls/Dialog/index.coffee
+
+    script(id='/partials/Guide/Design/controls/Dialog/', type='text/ng-template')
+        include partials/Guide/Design/controls/Dialog/index
+
+    script(id='/partials/Guide/Design/controls/Dialog/Example/', type='text/ng-template')
+        include partials/Guide/Design/controls/Dialog/Example/index
+
+
+    include partials/Guide/Design/controls/Select/index.coffee
+
+    script(id='/partials/Guide/Design/controls/Select/', type='text/ng-template')
+        include partials/Guide/Design/controls/Select/index
+
+
+    script(id='/partials/Reference/', type='text/ng-template')
+        include partials/Reference/index
+
+
+
+block app-head-nav
+
+    ul.nav.navbar-nav.pull-left
+
+        li: a(ng-href="#/design")
+            u Design
+
+        li: a(ng-href="#/develop")
+            u Develop
+
+    ul.nav.navbar-nav.pull-right
+
+        li: a(ng-href="#/guide")
+            u Docs
