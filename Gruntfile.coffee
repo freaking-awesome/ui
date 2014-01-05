@@ -37,12 +37,12 @@ module.exports= (grunt) ->
                     src: ['*.js']
                     dest: '<%= pkg.build.bootstrap.target %>'
                 }]
-            font:
+            fonts:
                 files: [{
                     expand: true
-                    cwd: '<%= pkg.build.font.source %>'
+                    cwd: '<%= pkg.build.fonts.source %>'
                     src: ['**/*']
-                    dest: '<%= pkg.build.font.target %>'
+                    dest: '<%= pkg.build.fonts.target %>'
                 }]
             jquery:
                 files: [{

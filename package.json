@@ -1,5 +1,5 @@
 {
-  "name": "awesome-ui", "version": "0.3.0",
+  "name": "awesome-ui", "version": "0.3.1",
 
   "license": "GPL",
 
@@ -11,9 +11,9 @@
   },
 
   "build": {
-    "font": {
-      "source"    : "bower_components/font-awesome/font",
-      "target"    : "font"
+    "fonts": {
+      "source"    : "bower_components/font-awesome/fonts",
+      "target"    : "fonts"
     },
     "angular": {
       "source"    : "bower_components/angular",
@@ -38,20 +38,20 @@
     },
     "awesome": {
       "css": {
-        "source"    : "components/awesome/css",
-        "target"    : "css"
+        "source"  : "components/awesome/css",
+        "target"  : "css"
       },
       "js": {
-        "source"    : "components/awesome/js",
-        "target"    : "js"
+        "source"  : "components/awesome/js",
+        "target"  : "js"
       },
       "docs": {
-        "source"    : "components/awesome/spec/docs",
-        "target"    : "spec/docs"
+        "source"  : "components/awesome/spec/docs",
+        "target"  : "spec/docs"
       },
       "templates": {
-        "source"    : "components/awesome",
-        "target"    : "./"
+        "source"  : "components/awesome",
+        "target"  : "./"
       }
     },
     "bootstrap": {
