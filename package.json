@@ -68,6 +68,7 @@
     "coffee-script": "latest",
     "bower": "latest",
     "grunt": "latest",
+    "grunt-cli": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-contrib-coffee": "latest",
